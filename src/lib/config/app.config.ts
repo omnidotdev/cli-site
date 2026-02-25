@@ -20,7 +20,7 @@ const app = {
     website: "https://omni.dev",
   },
   links: {
-    docs: "https://docs.omni.dev/armory/cli",
+    docs: "https://docs.omni.dev/armory/omni-cli",
     github: "https://github.com/omnidotdev/cli",
   },
 };
