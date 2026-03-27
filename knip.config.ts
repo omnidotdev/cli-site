@@ -8,7 +8,7 @@ const knipConfig: KnipConfig = {
   entry: ["src/routes/**/*.{ts,tsx}", "src/router.tsx"],
   project: ["src/**/*.{ts,tsx,css}"],
   ignoreExportsUsedInFile: true,
-  ignore: ["src/routeTree.gen.ts"],
+  ignore: [],
   ignoreDependencies: [],
   tags: ["-knipignore"],
   rules: {

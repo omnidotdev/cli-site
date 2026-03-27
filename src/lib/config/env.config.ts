@@ -15,6 +15,3 @@ export const {
   VITE_FLAGS_CLIENT_KEY: FLAGS_CLIENT_KEY,
 } = env;
 
-// environment helpers
-export const isDevEnv = import.meta.env.DEV;
-export const isProdEnv = import.meta.env.PROD;
