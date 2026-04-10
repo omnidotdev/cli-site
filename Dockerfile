@@ -12,7 +12,7 @@ RUN bun run build
 
 # TODO: Switch back to Bun runtime once module resolution is fixed
 # Bun doesn't properly resolve externalized Nitro packages (srvx, react-dom/server)
-FROM node:22-slim AS runner
+FROM node:24-slim AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
