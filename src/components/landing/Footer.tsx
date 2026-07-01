@@ -54,6 +54,14 @@ const Footer = () => {
           >
             Terms
           </a>
+          <a
+            href={app.legal.cookies}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="transition-colors hover:text-foreground"
+          >
+            Cookies
+          </a>
         </nav>
       </div>
     </footer>
