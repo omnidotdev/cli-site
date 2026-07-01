@@ -23,6 +23,11 @@ const app = {
     docs: "https://docs.omni.dev/armory/omni-cli",
     github: "https://github.com/omnidotdev/cli",
   },
+  // Legal links mirror the omni-api catalog SSOT
+  legal: {
+    privacy: "https://omni.dev/legal/privacy",
+    terms: "https://omni.dev/legal/terms",
+  },
 };
 
 export default app;
