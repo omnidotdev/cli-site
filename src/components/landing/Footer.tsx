@@ -1,71 +1,31 @@
+import { AppFooter } from "@omnidotdev/thornberry/app-footer";
+import { Github as GitHubIcon } from "lucide-react";
+
 import app from "@/lib/config/app.config";
 
 /**
- * Site footer.
+ * Site footer. Renders the shared Omni `<AppFooter>`, which bakes in the
+ * "Made with <symbol> by Omni" credit, the omni.dev link, and the legal links so
+ * they can't drift. Omni CLI supplies only its catalog symbol, docs link, and
+ * GitHub link.
  */
-const Footer = () => {
-  const year = new Date().getFullYear();
-
-  return (
-    <footer className="border-border/50 border-t px-6 py-8">
-      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 text-muted-foreground text-sm sm:flex-row">
-        <p>
-          &copy; {year} {app.organization.name}
-        </p>
-
-        <nav className="flex gap-4">
-          <a
-            href={app.links.docs}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Docs
-          </a>
-          <a
-            href={app.links.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            GitHub
-          </a>
-          <a
-            href={app.organization.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Omni
-          </a>
-          <a
-            href={app.legal.privacy}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Privacy
-          </a>
-          <a
-            href={app.legal.terms}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Terms
-          </a>
-          <a
-            href={app.legal.cookies}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="transition-colors hover:text-foreground"
-          >
-            Cookies
-          </a>
-        </nav>
-      </div>
-    </footer>
-  );
-};
+const Footer = () => (
+  <AppFooter
+    appSymbol={app.icon}
+    docsUrl={app.links.docs}
+    orgUrl={app.organization.url}
+    socials={
+      <a
+        href={app.links.github}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="GitHub"
+        className="rounded px-2 py-1 transition-colors hover:text-foreground"
+      >
+        <GitHubIcon className="size-5" />
+      </a>
+    }
+  />
+);
 
 export default Footer;
