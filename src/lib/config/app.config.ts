@@ -24,7 +24,7 @@ const app = {
     website: "https://omni.dev",
   },
   links: {
-    docs: "https://docs.omni.dev/armory/omni-cli",
+    docs: "https://docs.omni.dev/products/omni-cli",
     github: "https://github.com/omnidotdev/cli",
   },
   // Legal links mirror the omni-api catalog SSOT
