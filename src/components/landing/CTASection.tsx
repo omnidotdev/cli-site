@@ -1,6 +1,6 @@
+import { Button } from "@omnidotdev/thornberry/button";
 import { ArrowRight } from "lucide-react";
 
-import { Button } from "@/components/ui/button";
 import app from "@/lib/config/app.config";
 
 /**
@@ -20,7 +20,7 @@ const CTASection = () => (
         <Button size="lg" asChild>
           <a href={app.links.docs} target="_blank" rel="noopener noreferrer">
             Read the Docs
-            <ArrowRight className="ml-2 size-4" />
+            <ArrowRight className="size-4" />
           </a>
         </Button>
 

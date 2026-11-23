@@ -1,4 +1,11 @@
 import {
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardRoot,
+  CardTitle,
+} from "@omnidotdev/thornberry/card";
+import {
   Blocks,
   Globe,
   Layers,
@@ -8,14 +15,6 @@ import {
   Workflow,
   Zap,
 } from "lucide-react";
-
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 
 const features = [
   {
@@ -85,15 +84,17 @@ const FeaturesSection = () => (
 
       <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
         {features.map(({ icon: Icon, title, description }) => (
-          <Card key={title} className="border-border/50 bg-card/50">
+          <CardRoot key={title} className="border-border/50 bg-card/50">
             <CardHeader className="pb-2">
               <Icon className="mb-2 size-5 text-primary" />
-              <CardTitle className="text-base">{title}</CardTitle>
+              <CardTitle asChild>
+                <h3 className="text-base">{title}</h3>
+              </CardTitle>
             </CardHeader>
             <CardContent>
               <CardDescription>{description}</CardDescription>
             </CardContent>
-          </Card>
+          </CardRoot>
         ))}
       </div>
     </div>
