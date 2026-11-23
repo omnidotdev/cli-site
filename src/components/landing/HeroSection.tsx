@@ -1,7 +1,7 @@
+import { Badge } from "@omnidotdev/thornberry/badge";
+import { Button } from "@omnidotdev/thornberry/button";
 import { ArrowRight, Terminal } from "lucide-react";
 
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import app from "@/lib/config/app.config";
 
 /**
@@ -27,7 +27,7 @@ const HeroSection = () => (
       <Button size="lg" asChild>
         <a href={app.links.docs} target="_blank" rel="noopener noreferrer">
           Get Started
-          <ArrowRight className="ml-2 size-4" />
+          <ArrowRight className="size-4" />
         </a>
       </Button>
 

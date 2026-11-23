@@ -1,8 +1,8 @@
+import { Button } from "@omnidotdev/thornberry/button";
 import { Link } from "@tanstack/react-router";
 import { Terminal } from "lucide-react";
 
 import { ThemeToggle } from "@/components/core";
-import { Button } from "@/components/ui/button";
 import app from "@/lib/config/app.config";
 
 /**
